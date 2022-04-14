@@ -1,0 +1,52 @@
+body{
+  position: relative;
+  width: auto;
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./images/lightbgjpg.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: "Montserrat Alternates"
+  /* color: white; */
+}
+h1 {
+
+    /* opacity: 0; */
+    text-transform: capitalize;
+
+    text-align: center;
+    font-size: 80px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    color: black;
+}
+.card-img-top{
+  margin:auto;
+
+  height: 50%;
+}
+.card{
+  margin:0 auto;
+  margin-bottom: 10px;
+  background-color: black;
+  color:white;
+  font-style: italic;
+  text-align: center;
+  height: 80%;
+
+
+  opacity: 80%;
+}
+.card:hover{
+  opacity: 100%;
+  border-style: solid;
+  border-color: grey;
+  border-width: thick;
+}
+.btn1{
+  position: relative;
+      top: -15px;
+}
