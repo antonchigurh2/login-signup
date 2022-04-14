@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
 
-    <!-- <link rel="stylesheet" href="css/form.css"> -->
+    <link rel="stylesheet" href="css/register.css">
 
 </head>
+
 <body>
 
-    <div class="alert-box">
-        <p class="alert"></p>
-    </div>
-
-    <div class="form" action='/register',method='post'>
+    <form class="form" action='/api/user/register' method='post'>
         <h1 class="heading">Register</h1>
         <input type="text" placeholder="name" autocomplete="off" class="name" name="name" required>
-        <input type="email" placeholder="email" autocomplete="off" class="email" style="text-transform: lowercase" name="email" required>
+        <input type="email" placeholder="email" autocomplete="off" class="email" style="text-transform: lowercase"
+            name="email" required>
         <input type="password" placeholder="password" autocomplete="off" class="password" name="password" required>
-        <button class="submit-btn">register</button>
+        <button class="submit">register</button>
         <a href="login.html" class="link">already have an account ? log in here</a>
-    </div>
+    </form>
 
-    <script src="js/form.js"></script>
+    <script type="text/javascript">
+
+        const form = [...document.querySelector('.form').children];
+
+        form.forEach((item, i) => {
+            setTimeout(() => {
+                item.style.opacity = 1;
+            }, i * 100);
+        })
+
+        window.onload = () => {
+            if (sessionStorage.name) {
+                location.href = '/';
+            }
+        }
+    </script>
+
 
 </body>
+
 </html>
